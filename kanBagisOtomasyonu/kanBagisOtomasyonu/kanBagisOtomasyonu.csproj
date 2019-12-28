@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20F592C0-1D16-4113-8498-F3B651E66752}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>kanBagisOtomasyonu</RootNamespace>
+    <AssemblyName>kanBagisOtomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bagis.cs" />
+    <Compile Include="Bagisci.cs" />
+    <Compile Include="Bagiscilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bagiscilar.Designer.cs">
+      <DependentUpon>Bagiscilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bagislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bagislar.Designer.cs">
+      <DependentUpon>Bagislar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BagisMerkezleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BagisMerkezleri.Designer.cs">
+      <DependentUpon>BagisMerkezleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO.cs" />
+    <Compile Include="Hasta.cs" />
+    <Compile Include="hastalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hastalar.Designer.cs">
+      <DependentUpon>hastalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hastane.cs" />
+    <Compile Include="hastaneler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hastaneler.Designer.cs">
+      <DependentUpon>hastaneler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hastaneYonetici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hastaneYonetici.Designer.cs">
+      <DependentUpon>hastaneYonetici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="girisSayfasi.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="girisSayfasi.Designer.cs">
+      <DependentUpon>girisSayfasi.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="hastaneİlanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hastaneİlanlar.Designer.cs">
+      <DependentUpon>hastaneİlanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ilanlarr.cs" />
+    <Compile Include="KanBagisMerkezi.cs" />
+    <Compile Include="kanBagisMerkeziYonetici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kanBagisMerkeziYonetici.Designer.cs">
+      <DependentUpon>kanBagisMerkeziYonetici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kanBagisOtomasyonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kanBagisOtomasyonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kanDepo.cs" />
+    <Compile Include="KanDeposu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KanDeposu.Designer.cs">
+      <DependentUpon>KanDeposu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tedarik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tedarik.Designer.cs">
+      <DependentUpon>Tedarik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tedarikk.cs" />
+    <Compile Include="Yonetici.cs" />
+    <Compile Include="Yoneticiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yoneticiler.Designer.cs">
+      <DependentUpon>Yoneticiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yoneticiler2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yoneticiler2.Designer.cs">
+      <DependentUpon>yoneticiler2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="İlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="İlan.Designer.cs">
+      <DependentUpon>İlan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bagiscilar.resx">
+      <DependentUpon>Bagiscilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bagislar.resx">
+      <DependentUpon>Bagislar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BagisMerkezleri.resx">
+      <DependentUpon>BagisMerkezleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="girisSayfasi.resx">
+      <DependentUpon>girisSayfasi.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hastalar.resx">
+      <DependentUpon>hastalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hastaneler.resx">
+      <DependentUpon>hastaneler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hastaneYonetici.resx">
+      <DependentUpon>hastaneYonetici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hastaneİlanlar.resx">
+      <DependentUpon>hastaneİlanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kanBagisMerkeziYonetici.resx">
+      <DependentUpon>kanBagisMerkeziYonetici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KanDeposu.resx">
+      <DependentUpon>KanDeposu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tedarik.resx">
+      <DependentUpon>Tedarik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yoneticiler.resx">
+      <DependentUpon>Yoneticiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yoneticiler2.resx">
+      <DependentUpon>yoneticiler2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="İlan.resx">
+      <DependentUpon>İlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="kanBagisOtomasyonDataSet.xsc">
+      <DependentUpon>kanBagisOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kanBagisOtomasyonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kanBagisOtomasyonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kanBagisOtomasyonDataSet.xss">
+      <DependentUpon>kanBagisOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14314725_untitled-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kan-bagisi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\96929.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bagis_sayfasi.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
